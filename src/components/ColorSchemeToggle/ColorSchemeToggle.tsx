@@ -1,5 +1,4 @@
-import { ActionIcon, Group, useMantineColorScheme } from '@mantine/core';
-import { SunIcon, MoonIcon } from '@modulz/radix-icons';
+import { ActionIcon, Box, Group, useMantineColorScheme } from '@mantine/core';
 
 export function ColorSchemeToggle() {
     // eslint-disable-next-line @typescript-eslint/unbound-method
@@ -17,9 +16,9 @@ export function ColorSchemeToggle() {
                 })}
             >
                 {colorScheme === 'dark' ? (
-                    <SunIcon width={20} height={20} />
+                    <Box>Dark</Box>
                 ) : (
-                    <MoonIcon width={20} height={20} />
+                    <Box>Light</Box>
                 )}
             </ActionIcon>
         </Group>
