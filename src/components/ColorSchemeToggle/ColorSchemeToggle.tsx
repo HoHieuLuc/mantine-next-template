@@ -15,11 +15,10 @@ export function ColorSchemeToggle() {
                     color: theme.colorScheme === 'dark' ? theme.colors.yellow[4] : theme.colors.blue[6],
                 })}
             >
-                {colorScheme === 'dark' ? (
-                    <Box>Dark</Box>
-                ) : (
-                    <Box>Light</Box>
-                )}
+                {colorScheme === 'dark'
+                    ? <Box>Light</Box>
+                    : <Box>Dark</Box>
+                }
             </ActionIcon>
         </Group>
     );
