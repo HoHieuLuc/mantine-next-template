@@ -16,9 +16,9 @@ export function ColorSchemeToggle() {
                 })}
             >
                 {colorScheme === 'dark' ? (
-                    <Box>Dark</Box>
-                ) : (
                     <Box>Light</Box>
+                ) : (
+                    <Box>Dark</Box>
                 )}
             </ActionIcon>
         </Group>
