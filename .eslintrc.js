@@ -5,17 +5,45 @@ module.exports = {
         'plugin:@typescript-eslint/recommended',
         'plugin:react/recommended',
         'plugin:@typescript-eslint/recommended-requiring-type-checking',
-        'plugin:@next/next/recommended'
+        'plugin:@next/next/recommended',
+        'plugin:jest/recommended',
     ],
     plugins: [
         '@typescript-eslint',
-        'react'
+        'react',
+        'testing-library',
+        'jest',
     ],
     env: {
         browser: true,
         es6: true,
-        node: true
+        node: true,
     },
+    settings: {
+        react: {
+            pragma: 'React',
+            version: 'detect',
+        }
+    },
+    parser: '@typescript-eslint/parser',
+    parserOptions: {
+        project: 'tsconfig.eslint.json',
+        tsconfigRootDir: __dirname,
+        sourceType: 'module',
+    },
+    ignorePatterns: [
+        'next.config.js',
+        'jest.*.ts',
+    ],
+    overrides: [
+        {
+            files: ['**/?(*.)+(spec|test).[jt]s?(x)'],
+            extends: ['plugin:testing-library/react'],
+            rules: {
+                '@typescript-eslint/no-unsafe-call': 'off',
+            },
+        },
+    ],
     rules: {
         '@typescript-eslint/semi': [
             'error'
@@ -54,6 +82,10 @@ module.exports = {
                 'allowTemplateLiterals': true
             }
         ],
+        'jsx-quotes': [
+            'error',
+            'prefer-single'
+        ],
         'semi': [
             'error',
             'always'
@@ -80,17 +112,4 @@ module.exports = {
             }
         ],
     },
-    settings: {
-        react: {
-            pragma: 'React',
-            version: 'detect'
-        }
-    },
-    parser: '@typescript-eslint/parser',
-    parserOptions: {
-        project: 'tsconfig.eslint.json',
-        tsconfigRootDir: __dirname,
-        sourceType: 'module'
-    },
-    ignorePatterns: ['next.config.js']
 };

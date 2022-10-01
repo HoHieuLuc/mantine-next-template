@@ -1,7 +1,7 @@
 # Mantine Next Template
 
 Get started with Mantine + Next with just a few button clicks.
-Click `Use this template` button at the header of repository or [follow this link](https://github.com/HoHieuLuc/my-mantine-next-template/generate) and
+Click `Use this template` button at the header of repository or [follow this link](https://github.com/HoHieuLuc/mantine-next-template/generate) and
 create new repository with `@mantine` packages. Note that you have to be logged in to GitHub to generate template.
 
 ## Features
@@ -10,9 +10,8 @@ This template comes with several essential features:
 
 - Server side rendering setup for Mantine
 - Color scheme is stored in cookie to avoid color scheme mismatch after hydration
-- Storybook with color scheme toggle
 - Jest with react testing library
-- ESLint setup with [eslint-config-mantine](https://github.com/mantinedev/eslint-config-mantine)
+- ESLint setup
 
 ## npm scripts
 
@@ -32,6 +31,3 @@ This template comes with several essential features:
 - `test` – runs `jest`, `lint` and `typecheck` scripts
 
 ### Other scripts
-
-- `storybook` – starts storybook dev server
-- `storybook:build` – build production storybook bundle to `storybook-static`
