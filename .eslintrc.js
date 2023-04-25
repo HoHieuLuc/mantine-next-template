@@ -111,5 +111,6 @@ module.exports = {
                 'after': true
             }
         ],
+        'no-console': 'warn',
     },
 };
